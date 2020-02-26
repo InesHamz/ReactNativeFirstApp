@@ -15,13 +15,13 @@ export default class HomeTabScreen extends React.PureComponent {
         };
     }
     _fetchData() {
-        let db = firebase.database().ref("TheReactApp/Posts");
+        let db = firebase.database().ref("posts");
         this.state.posts = [];
         db.on("value", snapshot => {
             var snapshot = snapshot.val();
             var keys = Object.keys(snapshot);
             for (let i = 0; i < keys.length; i++) {
-                // this.setState({ posts: [...this.state.posts, snapshot[keys[i]]] });
+                //this.setState({ posts: [...this.state.posts, snapshot[keys[i]]] });
                 this.state.posts.push(snapshot[keys[i]]);
                 this.forceUpdate();
             }

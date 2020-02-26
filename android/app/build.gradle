@@ -152,6 +152,10 @@ android {
 }
 
 dependencies {
+    //compile project(':react-native-app-auth')
+    compile project(':react-native-vector-icons')
+    compile project(':react-native-linear-gradient')
+    compile project(':react-native-gesture-handler')
     implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation project(':react-native-linear-gradient')
     implementation project(':react-native-vector-icons')

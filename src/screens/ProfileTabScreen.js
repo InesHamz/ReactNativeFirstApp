@@ -28,10 +28,10 @@ export default class ProfileTabScreen extends PureComponent {
                         style={styles.gradientView}
                         pointerEvents="none"
                     />
-                    <Text style={styles.title}>Denial Rozar</Text>
-                    <Text style={styles.email}>denialrozar@gmail.com</Text>
+                    <Text style={styles.title}>Patrick Bongaerts</Text>
+                    <Text style={styles.email}>patrick.bongaerts@oiio.com</Text>
                     <TouchableOpacity style={styles.imageContainer} onPress={this._onPressPorfilePic} activeOpacity={0.8}>
-                        <Image style={styles.image} source={require("../assests/images/profile-pic.jpg")} />
+                        <Image style={styles.image} source={require("../assests/images/profile-pic.png")} />
                     </TouchableOpacity>
                 </View>
                 <View style={styles.bottomContainer}>
@@ -40,8 +40,8 @@ export default class ProfileTabScreen extends PureComponent {
                             <Ionicons style={styles.fabIcon} size={iconSize} name={"ios-medal"} color="#2196f3" />
                         </View>
                         <View style={styles.textsView}>
-                            <Text style={styles.textTitle}>School</Text>
-                            <Text style={styles.textDescription}>The Lawrenceville School</Text>
+                            <Text style={styles.textTitle}>OIIO</Text>
+                            <Text style={styles.textDescription}>OIIO Software Company</Text>
                         </View>
                     </View>
                     <View style={styles.itemView}>
@@ -50,7 +50,7 @@ export default class ProfileTabScreen extends PureComponent {
                         </View>
                         <View style={styles.textsView}>
                             <Text style={styles.textTitle}>Nick Name</Text>
-                            <Text style={styles.textDescription}>r.denial</Text>
+                            <Text style={styles.textDescription}>p.bongaerts</Text>
                         </View>
                     </View>
                     <View style={styles.itemView}>
@@ -59,7 +59,7 @@ export default class ProfileTabScreen extends PureComponent {
                         </View>
                         <View style={styles.textsView}>
                             <Text style={styles.textTitle}>Emergency Contact</Text>
-                            <Text style={styles.textDescription}>Jessica Curl</Text>
+                            <Text style={styles.textDescription}>Mike Dumont</Text>
                         </View>
                     </View>
                     <View style={styles.itemView}>
@@ -68,7 +68,7 @@ export default class ProfileTabScreen extends PureComponent {
                         </View>
                         <View style={styles.textsView}>
                             <Text style={styles.textTitle}>Emergency Number</Text>
-                            <Text style={styles.textDescription}>+1-9876543210</Text>
+                            <Text style={styles.textDescription}>+31-9876543210</Text>
                         </View>
                     </View>
                 </View>

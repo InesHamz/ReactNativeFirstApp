@@ -6,14 +6,14 @@ import ItemNotification from "../components/ItemNotification";
 let localData = [
     {
         title: "Thanks!",
-        desc: "Thanks you very much for using this. Check out my github page for more React-Native applications"
+        desc: "Thanks for visiting our application, STAY TUNED!"
     },
     {
-        title: "The React App",
+        title: "OIIO",
         desc: "This application just trying to showcase the power & wisdom of React-Native"
     },
     {
-        title: "Developers are everywhere...",
+        title: "Small business are everywhere...",
         desc: "Checkout AboutApp screen for more info about various Third-Party Libraries used in this application"
     }
 ];

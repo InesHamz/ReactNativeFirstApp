@@ -6,11 +6,10 @@ import Ionicons from "react-native-vector-icons/Ionicons";
 import LinearGradient from "react-native-linear-gradient";
 
 const githubIconSize = 24;
-let appUrl = "https://github.com/adityasonel/TheReactApp";
-let firebaseUrl = "https://firebase.google.com";
-let reactNavigationUrl = "https://reactnavigation.org/docs/en/getting-started.html";
-let reactNativeVectorIconUrl = "https://github.com/oblador/react-native-vector-icons";
-let reactNativeLinearGradient = "https://github.com/react-native-community/react-native-linear-gradient";
+let appUrl = "https://www.getoiio.com";
+let linkedinUrl = "https://www.linkedin.com/company/getoiio";
+let facebookUrl = "https://www.facebook.com/getOIIO/";
+
 
 export default class AboutAppScreen extends React.PureComponent {
     constructor(props) {
@@ -27,42 +26,24 @@ export default class AboutAppScreen extends React.PureComponent {
                     Alert.alert("Error!!!", "There is some error while opening this url, please try again later.");
                 });
         } else if (value == 2) {
-            Linking.canOpenURL(firebaseUrl)
+            Linking.canOpenURL(linkedinUrl)
                 .then(supported => {
-                    if (supported) Linking.openURL(firebaseUrl);
+                    if (supported) Linking.openURL(linkedinUrl);
                     else Alert.alert("Error!!!", "There is some error while parsing this url, please try again later.");
                 })
                 .catch(err => {
                     Alert.alert("Error!!!", "There is some error while opening this url, please try again later.");
                 });
         } else if (value == 3) {
-            Linking.canOpenURL(reactNavigationUrl)
+            Linking.canOpenURL(facebookUrl)
                 .then(supported => {
-                    if (supported) Linking.openURL(reactNavigationUrl);
+                    if (supported) Linking.openURL(facebookUrl);
                     else Alert.alert("Error!!!", "There is some error while parsing this url, please try again later.");
                 })
                 .catch(err => {
                     Alert.alert("Error!!!", "There is some error while opening this url, please try again later.");
                 });
-        } else if (value == 4) {
-            Linking.canOpenURL(reactNativeVectorIconUrl)
-                .then(supported => {
-                    if (supported) Linking.openURL(reactNativeVectorIconUrl);
-                    else Alert.alert("Error!!!", "There is some error while parsing this url, please try again later.");
-                })
-                .catch(err => {
-                    Alert.alert("Error!!!", "There is some error while opening this url, please try again later.");
-                });
-        } else if (value == 5) {
-            Linking.canOpenURL(reactNativeLinearGradient)
-                .then(supported => {
-                    if (supported) Linking.openURL(reactNativeLinearGradient);
-                    else Alert.alert("Error!!!", "There is some error while parsing this url, please try again later.");
-                })
-                .catch(err => {
-                    Alert.alert("Error!!!", "There is some error while opening this url, please try again later.");
-                });
-        }
+        } 
     };
     render() {
         return (
@@ -72,56 +53,39 @@ export default class AboutAppScreen extends React.PureComponent {
 
                 <ScrollView style={styles.scrollView} showsVerticalScrollIndicator={false}>
                     <LinearGradient start={{ x: 0, y: 0 }} end={{ x: 1, y: 0 }} colors={["#f093fb", "#f5576c"]} style={styles.card}>
-                        <Text style={styles.title}>The React App</Text>
+                        <Text style={styles.title}>OIIO</Text>
                         <Text style={styles.description}>
-                            The React-App is just a catalogue to show power of React-Native mobile developement.{"\n"}This application open-source
-                            developed with some other Third-Parties libraries.{"\n\n"}Check it's source code on Github.
+                        OIIO is relationship management, handy document management, 1-click invoicing and smart agenda planning in a secure customer environment. {"\n"} Always available on every device. 
+                        {"\n"} Discover smarter and faster business.{"\n\n"} Check our website.
                         </Text>
                         <TouchableOpacity style={styles.fab} onPress={() => this._onPressFab(1)} activeOpacity={0.8}>
-                            <Ionicons name={"logo-github"} size={githubIconSize} color={"black"} style={styles.githubIcon} />
+                            <Ionicons name={"ios-globe"} size={githubIconSize} color={"black"} style={styles.githubIcon} />
                         </TouchableOpacity>
                     </LinearGradient>
                     <LinearGradient start={{ x: 0, y: 0 }} end={{ x: 1, y: 0 }} colors={["#f6d365", "#fda085"]} style={styles.card}>
-                        <Text style={styles.title}>Firebase</Text>
+                        <Text style={styles.title}>OIIO Linkedin</Text>
                         <Text style={styles.description}>
-                            There are various sevices offered online such as storage, online processing, realtime database, authorisation of user etc.
-                            Google developed a platform called Firebase that provide all these online services.
+                        Always in contact with your customer. OIIO offers smart applications to help the self-employed professional advance their own business.
                         </Text>
                         <TouchableOpacity style={styles.fab} onPress={() => this._onPressFab(2)} activeOpacity={0.8}>
                             <Ionicons name={"ios-globe"} size={githubIconSize} color={"black"} style={styles.githubIcon} />
                         </TouchableOpacity>
                     </LinearGradient>
                     <LinearGradient start={{ x: 0, y: 0 }} end={{ x: 1, y: 0 }} colors={["#84fab0", "#8fd3f4"]} style={styles.card}>
-                        <Text style={styles.title}>React Navigation</Text>
+                        <Text style={styles.title}>OIIO Facebook</Text>
                         <Text style={styles.description}>
-                            React Navigation is born from the React Native community's need for an extensible yet easy-to-use navigation solution
-                            written entirely in JavaScript (so you can read and understand all of the source), on top of powerful native primitives.
+                        OIIO makes it easier for independent professionals to run their own businesses.{"\n"} With smart online applications such as a calendar planner,
+                        quotes and invoices,{"\n"} marketing tools and more. Manage, communicate and document.
                         </Text>
                         <TouchableOpacity style={styles.fab} onPress={() => this._onPressFab(3)} activeOpacity={0.8}>
                             <Ionicons name={"ios-globe"} size={githubIconSize} color={"black"} style={styles.githubIcon} />
                         </TouchableOpacity>
                     </LinearGradient>
-                    <LinearGradient start={{ x: 0, y: 0 }} end={{ x: 1, y: 0 }} colors={["#6991c7", "#a3bded"]} style={styles.card}>
-                        <Text style={styles.title}>React-Native Vector Icons</Text>
-                        <Text style={styles.description}>
-                            Customizable Icons for React Native with support for NavBar/TabBar/ToolbarAndroid, image source and full styling.
-                        </Text>
-                        <TouchableOpacity style={styles.fab} onPress={() => this._onPressFab(4)} activeOpacity={0.8}>
-                            <Ionicons name={"logo-github"} size={githubIconSize} color={"black"} style={styles.githubIcon} />
-                        </TouchableOpacity>
-                    </LinearGradient>
-                    <LinearGradient start={{ x: 0, y: 0 }} end={{ x: 1, y: 0 }} colors={["#0fd850", "#f9f047"]} style={styles.card}>
-                        <Text style={styles.title}>React-Native Linear Gradient</Text>
-                        <Text style={styles.description}>A {"<LinearGradient />"} component for react-native.</Text>
-                        <TouchableOpacity style={styles.fab} onPress={() => this._onPressFab(5)} activeOpacity={0.8}>
-                            <Ionicons name={"logo-github"} size={githubIconSize} color={"black"} style={styles.githubIcon} />
-                        </TouchableOpacity>
-                    </LinearGradient>
 
                     <Text style={styles.bottomTitle}>
-                        Made with <Ionicons name={"ios-heart"} size={14} color={"red"} /> in India
+                        Made with <Ionicons name={"ios-heart"} size={14} color={"red"} /> in Geleen,Netherlands
                     </Text>
-                    <Text style={styles.textVersion}>version-1.0</Text>
+                    <Text style={styles.textVersion}>version-0.0</Text>
                 </ScrollView>
             </View>
         );

@@ -8,6 +8,8 @@ import NotificationTabScreen from "./src/screens/NotificationTabScreen";
 import ProfileTabScreen from "./src/screens/ProfileTabScreen";
 
 import ImageViewScreen from "./src/screens/ImageViewScreen";
+import LoginScreen from './src/screens/LoginScreen';
+
 import AboutAppScreen from "./src/screens/AboutAppScreen";
 
 import Ionicons from "react-native-vector-icons/Ionicons";
@@ -95,10 +97,13 @@ const AppStack = createStackNavigator(
         },
         AboutAppScreen: {
             screen: AboutAppScreen
+        },
+        LoginScreen: {
+            screen: LoginScreen
         }
     },
     {
-        initialRouteName: "TabStack",
+        initialRouteName: "LoginScreen",
         headerMode: "none",
         transitionConfig: Platform.OS === "android" ? TransitionConfiguration : ""
     }

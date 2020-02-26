@@ -17,7 +17,7 @@ export default class ItemNotification extends React.PureComponent {
         return (
             <TouchableWithoutFeedback onPress={this._onPressContainer}>
                 <View style={styles.container} onPress={this._onPressContainer}>
-                    <Ionicons name={"ios-information-circle"} size={iconSize} color={"black"} />
+                    <Ionicons name={"ios-information-circle"} size={iconSize} color={"red"} />
                     <View style={styles.itemView}>
                         <Text style={styles.title}>{this.props.title}</Text>
                         <Text style={styles.desc} numberOfLines={2} ellipsizeMode="tail">
